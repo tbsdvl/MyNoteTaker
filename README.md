@@ -8,3 +8,7 @@ Then, your note will be saved. You may begin a new note by clicking the pencil a
 # Example
 
 ![Example of My Note Taker](https://github.com/tbsdvl/MyNoteTaker/blob/main/notetaking.gif)
+
+# Link to Application
+Check it out my deployed Heroku app for yourself!
+Herkoku Note Taker App [Link](https://mynotetakertcb.herokuapp.com/)

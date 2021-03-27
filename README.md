@@ -11,4 +11,5 @@ Then, your note will be saved. You may begin a new note by clicking the pencil a
 
 # Link to Application
 Check it out my deployed Heroku app for yourself!
-Herkoku Note Taker App [Link](https://mynotetakertcb.herokuapp.com/)
+<br>
+Herkoku Note Taker App: [Link](https://mynotetakertcb.herokuapp.com/)

@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 const app = express();
 
@@ -27,11 +28,23 @@ app.get("/api/notes", (req, res) => {
 });
 
 app.post("/api/notes", (req, res) => {
-    const newNote = req.body;
+    const newEntry = {
+        id: uuidv4(),
+        title: req.body.title,
+        text: req.body.text
+    }
 
-    fs.appendFile(path.join(__dirname, "/db/db.json"), newNote, (err) => {
+    fs.readFile(path.join(__dirname, "/db/db.json"), 'utf8', (err, data) => {
         if (err) throw err;
-    })
-})
+        var dbData = JSON.parse(data);
+        dbData.push(newEntry);
+        dbData = JSON.stringify(dbData, null, 2);
+
+        fs.writeFile(path.join(__dirname, "/db/db.json"), dbData, (err) => {
+            if (err) throw err;
+        });
+    });
+    res.redirect("back");
+});
 
 app.listen(PORT, console.log(`App listening on PORT: ${PORT}`));

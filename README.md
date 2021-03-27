@@ -7,4 +7,4 @@ Then, your note will be saved. You may begin a new note by clicking the pencil a
 
 # Example
 
-[Example of My Note Taker](
+[Example of My Note Taker](https://github.com/tbsdvl/MyNoteTaker/blob/main/notetaking.gif)
